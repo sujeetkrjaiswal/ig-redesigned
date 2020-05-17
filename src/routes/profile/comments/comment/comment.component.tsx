@@ -7,6 +7,7 @@ import TimeLapsed from 'src/components/time-lapsed/time-lapsed.component'
 import styles from './comment.module.scss'
 import ProfileContext from 'src/routes/profile/profile.context'
 import UserName from 'src/components/user-name/user-name.component'
+import Tagging from 'src/components/tagging/tagging.component'
 
 const { Paragraph } = Typography
 const iconProps = {
@@ -26,10 +27,10 @@ const Comment: FC<{ comment: PostCommentModel; postId: string; viewReplies: () =
   return (
     <div className={styles.commentContainer}>
       <img src={comment.authorImage} alt={comment.author} className={styles.avatar} />
-      <Paragraph className={styles.comment}>
+      <div className={styles.comment}>
         <UserName userName={comment.author} />
-        {comment.commentText}
-      </Paragraph>
+        <Tagging text={comment.commentText} showFull />
+      </div>
       <Button
         onClick={like}
         className={styles.like}

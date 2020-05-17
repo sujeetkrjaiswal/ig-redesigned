@@ -12,6 +12,7 @@ import UserName from 'src/components/user-name/user-name.component'
 import styles from './comments.module.scss'
 import TimeLapsed from 'src/components/time-lapsed/time-lapsed.component'
 import CommentInput from 'src/routes/profile/comments/comment-input/comment-input.component'
+import Tagging from 'src/components/tagging/tagging.component'
 
 const iconProps = {
   color: COLORS.iconColor,
@@ -58,10 +59,10 @@ const Comments: FC<{}> = () => {
       <div className={styles.captionHeader}>
         <img src={post.authorImage} alt={post.author} className={styles.avatar} />
         <div>
-          <Paragraph className={styles.caption}>
+          <div className={styles.caption}>
             <UserName userName={post.author} />
-            {post.contents[0].caption}
-          </Paragraph>
+            <Tagging text={post.contents[0].caption} showFull />
+          </div>
           <TimeLapsed timestamp={post.createdAt} />
         </div>
       </div>

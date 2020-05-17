@@ -12,6 +12,7 @@ import CommentInput from 'src/routes/profile/comments/comment-input/comment-inpu
 import TimeLapsed from 'src/components/time-lapsed/time-lapsed.component'
 import ResponsiveImage from 'src/components/responsive-image/responsive-image.component'
 import UserName from 'src/components/user-name/user-name.component'
+import Tagging from 'src/components/tagging/tagging.component'
 
 const { Text, Paragraph } = Typography
 const iconProps = {
@@ -98,24 +99,20 @@ const Post: FC<{
       </div>
       <div className={styles.body}>
         <Text strong>{post.likeCount} likes</Text>
-        <Paragraph ellipsis={{ rows: 2, expandable: true }} className={styles.caption}>
+        <div className={styles.caption}>
           <UserName userName={post.author} />
-          {post.contents[0].caption}
-        </Paragraph>
+          <Tagging text={post.contents[0].caption} />
+        </div>
         {post.comments.length > 2 ? (
           <Link to={`/profile/${profileId}/post/${post.id}/comments`}>
             View all {post.comments.length} comments
           </Link>
         ) : null}
         {post.comments.slice(-2).map((comment) => (
-          <Paragraph
-            ellipsis={{ rows: 2, expandable: true }}
-            className={styles.comment}
-            key={comment.id}
-          >
+          <div className={styles.comment} key={comment.id}>
             <UserName userName={comment.author} />
-            {comment.commentText}
-          </Paragraph>
+            <Tagging text={comment.commentText} />
+          </div>
         ))}
         <TimeLapsed timestamp={post.createdAt} />
       </div>

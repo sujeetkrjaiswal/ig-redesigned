@@ -2,6 +2,7 @@
 
 Things that are implemented
 
+- Configured with travis, for auto deployment to firebase hosting
 - A command-line utility to parse Instagram Response (saved as sample.json), and download all the images, thumnails etc and creates an JSON format (as data.json) to be used for the applicstion.
 - All the data are stored in IndexedDB and all the operations are done assuming this as the data source
 - User can `comment`, only last 2 comments are shown with posts
@@ -28,6 +29,7 @@ This will build it for local and then will start a local serve at port 500.
 You can then access it at [localhost:5000](http://localhost:5000)
 
 ```shell
+npm install
 npm run build
 npm run serve
 ```
@@ -35,6 +37,7 @@ npm run serve
 ## Starting local - For development
 
 ```bash
+npm install
 npm start
 ```
 

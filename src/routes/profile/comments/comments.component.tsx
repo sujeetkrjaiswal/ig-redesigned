@@ -18,7 +18,7 @@ const iconProps = {
   color: COLORS.iconColor,
   size: 24,
 }
-const { Text, Paragraph } = Typography
+const { Text } = Typography
 const Comments: FC<{}> = () => {
   const [post, setPost] = useState<PostModel | null>(null)
   const params = useParams<{ id: string; postId: string }>()

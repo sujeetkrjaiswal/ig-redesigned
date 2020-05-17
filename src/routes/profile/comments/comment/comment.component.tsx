@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useContext } from 'react'
 import { PostCommentModel } from 'src/models/posts.model'
-import { Button, Divider, Typography } from 'antd'
+import { Button, Divider } from 'antd'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import { COLORS } from 'src/constants/color.constant'
 import TimeLapsed from 'src/components/time-lapsed/time-lapsed.component'
@@ -9,7 +9,6 @@ import ProfileContext from 'src/routes/profile/profile.context'
 import UserName from 'src/components/user-name/user-name.component'
 import Tagging from 'src/components/tagging/tagging.component'
 
-const { Paragraph } = Typography
 const iconProps = {
   color: COLORS.iconColor,
   size: 12,

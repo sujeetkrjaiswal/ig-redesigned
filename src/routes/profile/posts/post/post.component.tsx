@@ -14,7 +14,7 @@ import ResponsiveImage from 'src/components/responsive-image/responsive-image.co
 import UserName from 'src/components/user-name/user-name.component'
 import Tagging from 'src/components/tagging/tagging.component'
 
-const { Text, Paragraph } = Typography
+const { Text } = Typography
 const iconProps = {
   color: COLORS.iconColor,
   size: 24,

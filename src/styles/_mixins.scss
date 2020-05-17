@@ -1,0 +1,37 @@
+$size-sm: 576px;
+$size-md: 768px;
+$size-lg: 992px;
+$size-xl: 1200px;
+$size-xxl: 1600px;
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (min-width: 0) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: $size-sm) {
+      @content;
+    }
+  } @else if $point == md {
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: $size-md) {
+      @content;
+    }
+  } @else if $point == lg {
+    // Large devices (desktops, 992px and up)
+    @media (min-width: $size-lg) {
+      @content;
+    }
+  } @else if $point == xl {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: $size-xl) {
+      @content;
+    }
+  } @else if $point == xxl {
+    // Extra Extra large devices (large desktops/tv, 1600px and up)
+    @media (min-width: $size-xxl) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.commentContainer {
+  display: grid;
+  grid-template-columns: 75px 1fr 32px;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    'avatar commentText like'
+    'avatar actions actions'
+    'avatar divider divider';
+  padding: 1rem;
+}
+
+.avatar {
+  grid-area: avatar;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+.comment {
+  grid-area: commentText;
+  margin: 0 !important;
+  .author {
+    padding-right: 0.5rem;
+  }
+}
+.like {
+  grid-area: like;
+}
+.actions {
+  grid-area: actions;
+  .actionBtn {
+    font-weight: bold;
+    margin: 0px 0.5em;
+    cursor: pointer;
+  }
+}
+.dividerContainer {
+  grid-area: divider;
+  .divider {
+    font-size: 0.75rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+  }
+}

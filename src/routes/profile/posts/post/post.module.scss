@@ -1,0 +1,68 @@
+@import "src/styles/variables";
+
+.postCard {
+  margin-bottom: 1rem;
+  border: 1px solid #f7f7f7;
+  border-radius: 5px;
+}
+
+.header {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  margin-right: 0.5rem;
+}
+.spacer {
+  flex: 1;
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.actionIcon {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 30px 30px 30px 1fr 30px;
+  margin: 0.5rem;
+}
+
+.body {
+  margin: 0.5rem;
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: 1fr;
+
+  .caption {
+    margin-bottom: 0;
+  }
+  .comment {
+    margin-bottom: 0;
+  }
+}
+.carouselContainer {
+  position: relative;
+  background: #bbbbbb;
+}
+
+.carouselImage {
+  object-fit: cover;
+}
+
+.imageIdx {
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  background: #ffffff;
+  color: $color-bg;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+// utility
+.padRight {
+  padding-right: 0.5rem;
+}

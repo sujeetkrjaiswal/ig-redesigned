@@ -1,0 +1,55 @@
+@import "src/styles/mixins";
+
+.summaryContainer {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-areas: 'profile title title title'
+  'profile post follower following'
+  'pcontent pcontent pcontent pcontent';
+  padding: 1rem;
+  align-items: start;
+}
+
+.profileImageContainer {
+  grid-area: profile;
+}
+.profileTitle {
+  grid-area: title;
+  align-self: end;
+}
+.postCount {
+  grid-area: post;
+  display: flex;
+  flex-direction: column;
+}
+.followerCount {
+  grid-area: follower;
+  display: flex;
+  flex-direction: column;
+}
+.followingCount {
+  grid-area: following;
+  display: flex;
+  flex-direction: column;
+}
+.profileContent {
+  grid-area: pcontent;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.bold {
+  font-weight: bold;
+}
+.profileImage {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+
+  @include breakpoint(sm) {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,25 @@
+
+.postGrid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 1rem 1rem;
+}
+
+.thumbnailContainer {
+  position: relative;
+}
+
+.thumbnail {
+  width: 100%;
+  transition: all linear 0.25s;
+  &:hover {
+    filter: grayscale(100%);
+  }
+}
+
+.multiIcon {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}

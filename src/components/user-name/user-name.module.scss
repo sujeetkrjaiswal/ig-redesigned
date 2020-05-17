@@ -1,0 +1,8 @@
+@import "src/styles/variables";
+
+.userName {
+  color: $color-bg !important;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}

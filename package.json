@@ -7,7 +7,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy --only hosting",
     "serve": "firebase serve --only hosting",
     "localise": "cd jobs && ts-node process-posts.ts"
   },

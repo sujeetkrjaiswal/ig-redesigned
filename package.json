@@ -2,6 +2,15 @@
   "name": "instagram-redesign",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "firebase deploy --only hosting",
+    "serve": "firebase serve --only hosting",
+    "localise": "cd jobs && ts-node process-posts.ts"
+  },
   "dependencies": {
     "antd": "^4.2.2",
     "axios": "^0.19.2",
@@ -25,27 +34,15 @@
     "@types/react-helmet-async": "^1.0.3",
     "@types/react-router-dom": "^5.1.5",
     "@types/uuid": "^7.0.3",
-    "cross-env": "^7.0.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
-    "gh-pages": "^2.2.0",
+    "firebase": "^7.14.4",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "react-scripts": "3.4.1",
     "serve": "^11.3.0",
     "ts-node": "^8.10.1",
     "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "cross-env PUBLIC_URL=/ig-redesigned react-scripts build",
-    "deploy": "gh-pages -d build",
-    "preserve": "react-scripts build",
-    "serve": "serve -s build",
-    "localise": "cd jobs && ts-node process-posts.ts"
   },
   "browserslist": {
     "production": [

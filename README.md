@@ -28,6 +28,7 @@ This will build it for local and then will start a local serve at port 500.
 You can then access it at [localhost:5000](http://localhost:5000)
 
 ```shell
+npm run build
 npm run serve
 ```
 
@@ -37,10 +38,6 @@ npm run serve
 npm start
 ```
 
-## Building to host in github pages
+## Building to deploy
 
-This command will build the application in the `pre` phase and then deploy to gh-pages branch of the repo
-
-```bash
-npm run deploy
-```
+Auto deployment is set using travis. It will automatically deploy to firebase when pushed to master.
